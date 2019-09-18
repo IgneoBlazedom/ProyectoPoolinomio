@@ -34,16 +34,67 @@ public class Test2Controller implements Initializable {
     Polinomio pol1 = Polinomio.createPolinomioRandom();
     Polinomio pol2 = Polinomio.createPolinomioRandom();
     
+    @FXML
     public void restaClicked(){
-        System.out.println("resta");
+        try {
+           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Resta.fxml"));
+           Parent root1 = (Parent) fxmlLoader.load();
+           
+           Resta windowResta = fxmlLoader.getController();
+           windowResta.setPolis(pol1, pol2);
+           
+           Stage stage = new Stage();
+           stage.initModality(Modality.APPLICATION_MODAL);
+           stage.setTitle("Resta");
+           stage.setScene(new Scene(root1));  
+           stage.show();
+
+       } 
+       catch (Exception e) {
+           System.out.println("nope");
+       }
     }
     
+    @FXML
     public void multClicked(){
-        System.out.println("mult");
+        try {
+           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Multiplicacion.fxml"));
+           Parent root1 = (Parent) fxmlLoader.load();
+           
+           Multiplicacion windowMult = fxmlLoader.getController();
+           windowMult.setPolis(pol1, pol2);
+           
+           Stage stage = new Stage();
+           stage.initModality(Modality.APPLICATION_MODAL);
+           stage.setTitle("Multiplicacion");
+           stage.setScene(new Scene(root1));  
+           stage.show();
+
+       } 
+       catch (Exception e) {
+           System.out.println("nope");
+       }
     }
     
+    @FXML
     public void divClicked(){
-        System.out.println("div");
+        try {
+           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Division.fxml"));
+           Parent root1 = (Parent) fxmlLoader.load();
+           
+           Division windowDivision = fxmlLoader.getController();
+           windowDivision.setPolis(pol1, pol2);
+           
+           Stage stage = new Stage();
+           stage.initModality(Modality.APPLICATION_MODAL);
+           stage.setTitle("Division");
+           stage.setScene(new Scene(root1));  
+           stage.show();
+
+       } 
+       catch (Exception e) {
+           System.out.println("nope");
+       }
     }
     
     public void salirClicked(){
@@ -58,8 +109,25 @@ public class Test2Controller implements Initializable {
         pol2 = Polinomio.createPolinomioRandom();
     }
     
+    @FXML
     public void teofClicked(){
-        System.out.println("Teof");
+        try {
+           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TeoremaFund.fxml"));
+           Parent root1 = (Parent) fxmlLoader.load();
+           
+           TeoremaFundController windowResta = fxmlLoader.getController();
+//           windowResta.setPolis(pol1, pol2);
+           
+           Stage stage = new Stage();
+           stage.initModality(Modality.APPLICATION_MODAL);
+           stage.setTitle("Raices");
+           stage.setScene(new Scene(root1));  
+           stage.show();
+
+       } 
+       catch (Exception e) {
+           System.out.println("nope");
+       }
     }
     
    @FXML

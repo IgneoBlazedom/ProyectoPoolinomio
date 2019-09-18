@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.TeoremaFundController">
+   <center>
+      <Label text="Teorema Fundamental" BorderPane.alignment="CENTER" />
+   </center>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <bottom>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Al chile no sé cómo hacerle con este hasta no saber cómo funciona" />
+            <Button fx:id="salir" mnemonicParsing="false" onAction="#salirClicked" prefHeight="25.0" prefWidth="551.0" text="Regresar" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
