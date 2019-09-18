@@ -193,7 +193,7 @@ public class Polinomio {
 //        return new Polinomio(grade, coef);
 //    }
     public Polinomio(int grado, ArrayList<Double> coeficientes, char ops){
-        System.out.println(ops);
+        System.out.println("Construyendo Polinomio Double");
         this.grado = grado;
         this.coeficientesD = coeficientes;
     }
