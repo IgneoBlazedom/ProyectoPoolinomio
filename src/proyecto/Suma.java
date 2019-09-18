@@ -58,22 +58,7 @@ public class Suma implements Initializable {
     private TextField grad6;
 
     public void confirmarClicked(){
-//        System.out.println("Confirmar");
-//        Integer suma = 0;
-//        if(grad0.getText().isEmpty())suma=suma+0;else suma = suma + Integer.parseInt(grad0.getText());
-//        if(grad1.getText().isEmpty())suma=suma+0;else suma = suma + Integer.parseInt(grad1.getText());
-//        if(grad2.getText().isEmpty())suma=suma+0;else suma = suma + Integer.parseInt(grad2.getText());
-//        if(grad3.getText().isEmpty())suma=suma+0;else suma = suma + Integer.parseInt(grad3.getText());
-//        if(grad4.getText().isEmpty())suma=suma+0;else suma = suma + Integer.parseInt(grad4.getText());
-//        if(grad5.getText().isEmpty())suma=suma+0;else suma = suma + Integer.parseInt(grad5.getText());
-//        if(grad6.getText().isEmpty())suma=suma+0;else suma = suma + Integer.parseInt(grad6.getText());
-//        
-//        if (suma>20) 
-//            labelRespuesta.setText(suma.toString());
-//        else
-//            labelRespuesta.setText("Resultado incorrecto, la respuesta correcta es jasjhsajhasjhhasdjasdhashhasdhashsdauyuuacsbuy uybasdbyu as"
-//                    + "sdasas" + suma);
-        
+
         ArrayList<Double> coef = new ArrayList<>();
         if(grad0.getText().isEmpty())coef.add(0.0);else coef.add(Double.parseDouble(grad0.getText()));
         if(grad1.getText().isEmpty())coef.add(0.0);else coef.add(Double.parseDouble(grad1.getText()));
