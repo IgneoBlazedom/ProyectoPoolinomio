@@ -17,7 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+import algebra.*;
 /**
  *
  * @author Hot Cakes
@@ -27,14 +27,13 @@ public class Test2Controller implements Initializable {
     private Button div;
     private Button mult;
     public Button salir;
+    public Button newPoli;
     private Button resta;
     private BorderPane Bp;
     private Button teof;
+    Polinomio pol1 = Polinomio.createPolinomioRandom();
+    Polinomio pol2 = Polinomio.createPolinomioRandom();
     
-//    public void sumaClicked(){
-//        System.out.println("suma");
-//    }
-//    
     public void restaClicked(){
         System.out.println("resta");
     }
@@ -50,8 +49,13 @@ public class Test2Controller implements Initializable {
     public void salirClicked(){
         System.out.println("salir");   
         Stage stage = (Stage) salir.getScene().getWindow();
-        stage.close();
-        
+        stage.close();        
+    }
+    
+    public void newPoliClicked(){
+        System.out.println("Nuevos Polinomios generados...");
+        pol1 = Polinomio.createPolinomioRandom();
+        pol2 = Polinomio.createPolinomioRandom();
     }
     
     public void teofClicked(){
@@ -63,6 +67,10 @@ public class Test2Controller implements Initializable {
        try {
            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Suma.fxml"));
            Parent root1 = (Parent) fxmlLoader.load();
+           
+           Suma windowSuma = fxmlLoader.getController();
+           windowSuma.setPolis(pol1, pol2);
+           
            Stage stage = new Stage();
            stage.initModality(Modality.APPLICATION_MODAL);
            stage.setTitle("Suma");
@@ -71,7 +79,7 @@ public class Test2Controller implements Initializable {
 
        } 
        catch (Exception e) {
-           System.out.println(e);
+           System.out.println("nope");
        }
    }
     

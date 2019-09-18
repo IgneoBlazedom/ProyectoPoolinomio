@@ -16,19 +16,19 @@
       </Label>
       <VBox layoutX="209.0" layoutY="78.0">
          <children>
-            <Label text="Sumar los Polinomios generados:">
+            <Label text="Sumar los siguientes polinomios:">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
             <Region prefHeight="11.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
-            <Label prefHeight="17.0" prefWidth="403.0" text="x6+x5+x4x+x3x2+x1+0">
+            <Label fx:id="labelPol1" prefHeight="17.0" prefWidth="403.0" text="x6+x5+x4x+x3x2+x1+0">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
             <Region prefHeight="4.0" prefWidth="393.0" />
-            <Label prefHeight="17.0" prefWidth="398.0" text="x6+x5+x4x+x3x2+x1+0">
+            <Label fx:id="labelPol2" prefHeight="17.0" prefWidth="398.0" text="x6+x5+x4x+x3x2+x1+0">
                <font>
                   <Font size="16.0" />
                </font>
